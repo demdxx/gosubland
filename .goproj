@@ -9,5 +9,5 @@ deps:
 
 cmd:
   run: "{go} run '{fullpath}/main.go' -basedir '{fullpath}' --debug"
-  build: "{go} build '{fullpath}/main.go'"
+  build: "{go} build -o '{solutionpath}/bin/subscribe' '{fullpath}/main.go'"
   scss: "{fullpath}/public/scss.sh '{fullpath}/public'"
