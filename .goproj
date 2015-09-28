@@ -1,0 +1,13 @@
+project: subscribe
+version: 0.0.1beta
+
+deps:
+  - github.com/gopk/config
+  - github.com/gopk/templates
+  - github.com/demdxx/gocast
+  - github.com/go-martini/martini
+
+cmd:
+  run: "{go} run '{fullpath}/main.go' -basedir '{fullpath}' --debug"
+  build: "{go} build '{fullpath}/main.go'"
+  scss: "{fullpath}/public/scss.sh '{fullpath}/public'"
