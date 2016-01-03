@@ -8,6 +8,7 @@ _obj
 _test
 .build
 .sass-cache
+.config/storage.txt
 
 # Architecture specific extensions/prefixes
 *.[568vq]

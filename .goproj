@@ -1,4 +1,4 @@
-project: subscribe
+project: www
 version: 0.0.1beta
 
 deps:
@@ -8,6 +8,7 @@ deps:
   - github.com/go-martini/martini
 
 cmd:
-  run: "{go} run '{fullpath}/main.go' -basedir '{fullpath}' --debug"
-  build: "{go} build -o '{solutionpath}/bin/subscribe' '{fullpath}/main.go'"
+  run: "{go} run '{fullpath}/main.go' -basedir '{fullpath}' --debug --fastcgi"
+  build: "{go} build -o '{solutionpath}/bin/www' '{fullpath}/main.go'"
+  build_deploy: "{go} build -o '{fullpath}/.build/www' '{fullpath}/main.go'"
   scss: "{fullpath}/public/scss.sh '{fullpath}/public'"

@@ -23,9 +23,10 @@ import (
 
 var (
   flagDebug        = flag.Bool("debug", false, "Debug mode")
+  flagMode         = flag.String("mode", "", "Run mode")
   flagHost         = flag.String("host", "", "Listen host address")
   flagBaseDir      = flag.String("basedir", "", "Base dir is prefix for all other paths")
-  flagConfigPath   = flag.String("config", "conf/main.conf", "Config file path")
+  flagConfigPath   = flag.String("config", "config/main.conf", "Config file path")
   flagTemplatePath = flag.String("templates", "templates/", "Template dirrectory")
   flagFastCGI      = flag.Bool("fastcgi", false, "Use FastCGI protocol")
 )

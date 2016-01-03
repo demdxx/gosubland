@@ -1,24 +1,43 @@
 {{template "layouts/base.html" .}}
 
 {{define "content"}}
+  <div class="cover black" data-color="black"></div>
+  <div class="container">
+      <h1 class="logo cursive">
+          GeniusRabbit
+      </h1>
 
-  <div class="container" id="main">
-    <form class="form-inline" method="post" action="" validation="true">
-      <h1>If you want to know about the opening of the first...</h1>
-
-      {{if .good}}
-      <h2>Ok. We'll let you know!</h2>
-      {{else if .error}}
-      <h3 class="error">Something wrong!</h3>
-      {{end}}
-
-      {{if not .good}}
-      <div class="form-group">
-        <input type="email" class="form-control input-lg" id="exampleInputEmail2" name="email" placeholder="Enter your email address" aria-required="true" required />
+      <div class="content">
+          <h4 class="motto">An innovative profitable business platform on its way!</h4>
+          <div class="subscribe">
+              <h5 class="info-text">
+                  Be one of the first to learn more about this exciting project.
+                  {{if .good}}
+                    <br />Ok. We'll let you know!
+                  {{else if .error}}
+                    <br /><span class="error">Something wrong!</span>
+                  {{end}}
+              </h5>
+              <div class="row">
+                  <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3">
+                    {{if not .good}}
+                      <form class="form-inline" role="form" method="post" action="" validation="true">
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                          <input type="email" class="form-control transparent" name="email" placeholder="Your email here..." required="true">
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-fill">Notify Me</button>
+                      </form>
+                    {{end}}
+                  </div>
+              </div>
+          </div>
       </div>
-      <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-      {{end}}
-    </form>
   </div>
-
+  <div class="footer">
+    <div class="container">
+      <!-- Made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>. -->
+      Coming soon <a href="http://geniusrabbit.com/">GeniusRabbit</a>
+    </div>
+  </div>
 {{end}}
